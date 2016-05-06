@@ -10,8 +10,7 @@ $( document ).ready( function () {
     
     
 	Handlebars.registerHelper('toJSON', function(object){
-		console.log(object)
-		return new Handlebars.SafeString(JSON.stringify(object.data.root.posts));
+		return new Handlebars.SafeString(JSON.stringify(object.data.root.posts, null, '    '));
 	});
 
 	Handlebars.registerHelper('stripePosts', function (posts, fn) {

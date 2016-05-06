@@ -5,5 +5,5 @@ var path = require('path');
 app.use('/', express.static(path.join(__dirname, 'client_src')));
 
 app.listen(3000, function() {
-    console.log("server started");
+    console.log("server started: http://localhost:3000/");
 });
